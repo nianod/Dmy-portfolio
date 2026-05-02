@@ -11,7 +11,8 @@ import Resime from "../Components/resime";
 const MOVING_TEXTS = [
   "Hello my name is Arnold...",
   "A Software Developer...",
-  "Cybersecurity Enthusiast",
+  "DevOps Archtect...",
+  "System DEveloper...",
   "Can we collaborate?",
 ];
 
