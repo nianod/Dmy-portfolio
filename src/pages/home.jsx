@@ -109,12 +109,13 @@ const Home = () => {
 
             <div className="space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
-                I'm a self-taught experienced and passionate Full-Stack Developer 
-                from Kenya. Currently in my second year studying Information 
-                Technology at Meru University. I specialize in building responsive, 
-                accessible, scalable and performant digital experiences that make 
-                a great impact.
-              </p>
+  I'm a self-taught and passionate DevOps Engineer and Software Developer 
+  from Kenya, currently pursuing a degree in Information Technology at 
+  Meru University. I specialize in building scalable, responsive, and 
+  high-performing applications while designing reliable infrastructure, 
+  automating workflows, and implementing modern CI/CD and cloud deployment 
+  practices that power seamless digital experiences.
+</p>
 
               <Resime />
 
