@@ -39,7 +39,8 @@ export default function FloatingButton() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/chat", {
+        const apiUrl = import.meta.env.VITE_API
+      const res = await fetch(`${apiUrl}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: trimmed }),
