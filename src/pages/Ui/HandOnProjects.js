@@ -78,58 +78,7 @@ let handOnProjects = [
       backend: "Supabase Auth & Supabase Database, Python"
     }
   },
-  // {
-  //   label: "Chatbot",
-  //   source: "https://github.com/nianod/Express-Ai-Chatbot",
-  //   live: "https://express-ai-chatbot.vercel.app/",
-  //   photo: "chatbot.jpeg",
-  //   name: "AI Chatbot",
-  //   mode: "public",
-  //   description: "This is a full-stack chatbot application powered by React (Vite) on the frontend and Express.js on the backend. Users can send messages, and the backend responds just like you're chatting with a bot!",
-  //      stack: {
-  //     fronted: "React(JSX), Typescript, Vite, Framer Motion",
-  //     backend: "NodeJs, ExpressJs, OpenAI API"
-  //   }
-  // },
-  // {
-  //   label: "Youtube Video Downloader",
-  //   source: "https://github.com/nianod/Youtube-downloader",
-  //   live: "https://youtube-video-downloader-two-delta.vercel.app/",
-  //   photo: "images.jpeg",
-  //   name: "Youtube Video Downloader",
-  //   mode: "public",
-  //   description: "A custom Node.js-based YouTube downloader built with Express and ytdl-core. Provides an API to fetch and download video/audio streams from YouTube URLs",
-  //         stack: {
-  //     fronted: "Html, Css, Javascript",
-  //     backend: "Node.js with Express.js"
-  //   }
-  // },
-  // {
-  //   label: "Github profile Finder",
-  //   source: "https://github.com/nianod/Github-Profile-Finder",
-  //   live: "https://github-profile-finder-smoky.vercel.app/",
-  //   photo: "Screenshot 2025-06-13 101018.png",
-  //   name: "Github profile Finder",
-  //   mode: "public",
-  //   description: "Site that allows users to search for GitHub profiles and view their details, including repositories, followers, and more.",
-  //   stack: {
-  //     fronted: "React(JSX), Taliwind",
-  //     backend: "Node.js with Express.js"
-  //   }    
-  // },
-  // {
-  //   label: "Car shelf",
-  //   source: "https://github.com/nianod/Milele-Car-Shelf",
-  //   live: "https://milele-car-shelf.vercel.app/",
-  //   photo: "Screenshot 2025-06-18 002149.png",
-  //   name: "Car shelf",
-  //   mode: "public",
-  //   description: "A simple web application to sell, buy and hire cars from Milele car sellers",
-  //   stack: {
-  //     fronted: "React(TSX), SweelAlert, Tailwind",
-  //     backend: "-"
-  //   }
-  // },
+  
   
 ];
 export default handOnProjects

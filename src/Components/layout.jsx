@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header"
 import Footer from "./Footer"
+import FloatingButton from "./FloatingButton";
 
 export default function Layout () {
     return (
@@ -9,6 +10,7 @@ export default function Layout () {
             <main className="p-2"> 
                 <Outlet/>
             </main>
+            <FloatingButton />
         <Footer/>
         </>
     )
