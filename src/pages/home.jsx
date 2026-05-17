@@ -9,9 +9,9 @@ import Resime from "../Components/resime";
 };
 
 const MOVING_TEXTS = [
-  "Hello my name is Arnold...",
-  "A Software Developer...",
+  "Hello my name is Arnold...",  
   "DevOps Archtect...",
+  "A Software Developer...",
   "System DEveloper...",
   "Can we collaborate?",
 ];
