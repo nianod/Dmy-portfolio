@@ -12,7 +12,7 @@ const INITIAL_MESSAGE = {
   text: "Hey! I'm Arnold AI 👋 Ask me anything about Arnold's work, skills, or how to get in touch.",
 };
 
-// ── Inline formatter: **bold**, *italic*, `code`, [text](url), bare URLs ──
+
 function inlineFormat(text) {
   const parts = [];
   const regex =
@@ -97,7 +97,7 @@ function inlineFormat(text) {
   return parts.length ? parts : text;
 }
 
-// ── Block-level markdown → React elements ──
+
 function renderMarkdown(text) {
   const lines = text.split("\n");
   const out = [];
@@ -108,7 +108,7 @@ function renderMarkdown(text) {
 
     if (!line.trim()) { i++; continue; }
 
-    // ## Heading 2
+
     if (line.startsWith("## ")) {
       out.push(
         <p
@@ -131,7 +131,7 @@ function renderMarkdown(text) {
       continue;
     }
 
-    // ### Heading 3
+
     if (line.startsWith("### ")) {
       out.push(
         <p
@@ -145,7 +145,7 @@ function renderMarkdown(text) {
       continue;
     }
 
-    // Unordered list
+
     if (line.match(/^[-*] /)) {
       const items = [];
       while (i < lines.length && lines[i].match(/^[-*] /)) {
@@ -174,7 +174,7 @@ function renderMarkdown(text) {
       continue;
     }
 
-    // Ordered list
+
     if (line.match(/^\d+\. /)) {
       const items = [];
       while (i < lines.length && lines[i].match(/^\d+\. /)) {
