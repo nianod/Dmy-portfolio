@@ -40,11 +40,11 @@ let handOnProjects = [
     }
   },
   {
-        label: "Load Balancer",
+        label: "Custom Load Balancer",
     source: "https://github.com/nianod/Custom-Load-Balancer",
     live: "https://c-odecommander.github.io/load-bal-doc",
     photo: "download.png",
-    name: "Load Balancer",
+    name: "Custom Load Balancer",
     mode: "public",
     description: "A production-ready HTTP/HTTPS load balancer with Round Robin, Weighted Round Robin, Health Checks, Sticky Sessions, TLS, and live JSON Metrics.",
     stack: {
