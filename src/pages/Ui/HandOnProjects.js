@@ -40,11 +40,11 @@ let handOnProjects = [
     }
   },
   {
-        label: "Load Balancer",
+        label: "Custom Load Balancer",
     source: "https://github.com/nianod/Custom-Load-Balancer",
     live: "https://c-odecommander.github.io/load-bal-doc",
     photo: "download.png",
-    name: "Load Balancer",
+    name: "Custom Load Balancer",
     mode: "public",
     description: "A production-ready HTTP/HTTPS load balancer with Round Robin, Weighted Round Robin, Health Checks, Sticky Sessions, TLS, and live JSON Metrics.",
     stack: {
@@ -54,16 +54,16 @@ let handOnProjects = [
   },
   
  {
-    label: "Group-connect",
-    source: "https://github.com/nianod/Group-connect",
-    live: "https://group-connect-gamma.vercel.app",
-    photo: "group.jpeg",
-    name: "Group-connect",
+    label: "Project Analyzer",
+    source: "https://github.com/nianod/Intelligence-analyzer-engine",
+    live: "https://analyzer-engine.top",
+    photo: "Data Analytics Dashboard with AI-Driven Automation.jpeg",
+    name: "Project Analyzer",
     mode: "public",
-    description: "Group Connect is a collaborative web platform designed to help students find study partners, form small learning groups, and organize study sessions based on shared subjects or interests. It promotes peer-to-peer learning, teamwork, and consistency among campus learners.",
+    description: "tool that gives you instant, multi-dimensional analysis of any GitHub repository or live website. Get security scans, tech stack detection, performance metrics, SEO insights, and repo intelligence — all in one place.",
     stack: {
-      fronted: "React(TSX), Redux Toolkit, Tailwind, AOS, Framer Motion",
-      backend: "Python, FastAPI, Heroku, MongoDB"
+      fronted: "Next.js, Tailwind, Typescript",
+      backend: "Python, FastAPI, Heroku"
     }},
   {
     label: "Help-Hub",
@@ -82,3 +82,4 @@ let handOnProjects = [
   
 ];
 export default handOnProjects
+
