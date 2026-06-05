@@ -146,7 +146,7 @@ const Header = () => {
 
           <div className="hidden md:flex">
             <a
-              href="https://my-payment-brown.vercel.app"
+              href="https://buy-arnold-coffee.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-800 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg "
@@ -211,7 +211,7 @@ const Header = () => {
 
               <div className="p-6 border-t border-gray-700/50">
                 <a
-                  href="https://my-payment-brown.vercel.app"
+                  href="https://buy-arnold-coffee.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-blue-700 to-blue-700 text-white rounded-xl font-semibold hover:transition-transform duration-300 shadow-lg"
@@ -229,4 +229,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header
