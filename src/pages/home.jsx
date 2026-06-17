@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import awinging from "./Ui/dummy";
-import Resime from "../Components/resime";
+import Resime from "../Components/resime"
+import { useRef } from "react";
 
  const USER_DATA = {
   name: "Arnold Katumo",
@@ -22,14 +23,18 @@ const PAUSE_DURATION = 500;
 const Home = () => {
   const [text, setText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [visits, setVisits] = useState(0)
+    const hasVisited = useRef(false);
 
    const typeEffect = useCallback(() => {
     const currentText = MOVING_TEXTS[textIndex];
     const shouldType = !isDeleting && text.length < currentText.length;
     const shouldDelete = isDeleting && text.length > 0;
     const shouldPause = !isDeleting && text.length === currentText.length;
-    const shouldMoveToNext = isDeleting && text.length === 0;
+    const shouldMoveToNext = isDeleting && text.length === 0
+  
+
 
     if (shouldType) {
       const timeout = setTimeout(() => {
@@ -60,6 +65,16 @@ const Home = () => {
     const cleanup = typeEffect();
     return cleanup;
   }, [typeEffect]);
+
+useEffect(() => {
+  if (hasVisited.current) return;
+  hasVisited.current = true
+  const API = import.meta.env.VITE_API
+
+  fetch(`${API}/visit`, { method: "POST" })
+    .then(res => res.json())
+    .then(data => setVisits(data.visits));
+}, []);
 
   return (
     <div className="mt-10 pb-5 min-h-screen bg-gradient-to-br from-gray-900/9o-black/90 relative z-10">
@@ -95,6 +110,7 @@ const Home = () => {
                 <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
                   Ideas into Code
                 </div>
+                <p className="te">visitors {visits}</p>
               </div>
             </div>
           </div>
@@ -133,7 +149,7 @@ const Home = () => {
 
                  <div className="flex justify-center gap-4 mt-6">
                   <div className="bg-blue-900/30 border border-blue-500/50 px-6 py-3 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-200">
-                    <div className="text-2xl font-bold text-blue-300">2+</div>
+                    <div className="text-2xl font-bold text-blue-300">3+</div>
                     <div className="text-sm text-blue-200">Years Experience</div>
                   </div>
                   <div className="bg-green-900/30 border border-green-500/50 px-6 py-3 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-200">
