@@ -254,7 +254,7 @@ export default function FloatingButton() {
     } catch {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", text: "Connection error. Please try again later." },
+        { role: "assistant", text: "Hello, Am currently under maintenance." },
       ]);
     } finally {
       setLoading(false);
