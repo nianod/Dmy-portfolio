@@ -29,7 +29,7 @@ const Logger = () => {
 
   return (
     <div className="m  bg-zinc-950 text-white  ">
-      {/* Header */}
+      
       <header className="border-b border-zinc-800 px-6 py-5">
         <div className="flex items-center justify-between">
           <div>
@@ -54,10 +54,10 @@ const Logger = () => {
         </div>
       </header>
 
-      {/* Main */}
+      
       <main className="flex h-[calc(100vh-89px)]">
 
-        {/* Conversation list */}
+      
         <aside className="w-[350px] shrink-0 overflow-y-auto border-r border-zinc-800">
 
           <div className="border-b border-zinc-800 px-5 py-4">
@@ -131,7 +131,7 @@ const Logger = () => {
             </div>
           ) : (
             <>
-              {/* Chat header */}
+            
               <div className="border-b border-zinc-800 px-6 py-4">
                 <div className="flex items-center justify-between">
                   <div>
@@ -150,10 +150,10 @@ const Logger = () => {
                 </div>
               </div>
 
-              {/* Messages */}
+               
               <div className="flex-1 overflow-y-auto p-6">
 
-                {/* User */}
+           
                 <div className="mb-6 flex justify-end">
                   <div className="max-w-[70%]">
                     <div className="mb-1 text-right text-xs text-zinc-600">
@@ -166,7 +166,7 @@ const Logger = () => {
                   </div>
                 </div>
 
-                {/* AI */}
+                
                 <div className="flex justify-start">
                   <div className="max-w-[70%]">
                     <div className="mb-1 text-xs text-zinc-600">
