@@ -231,35 +231,68 @@ export default function FloatingButton() {
     if (open) setTimeout(() => inputRef.current?.focus(), 300);
   }, [open]);
 
-  const sendMessage = async (text) => {
-    const trimmed = text.trim();
-    if (!trimmed || loading) return;
+  const getConversationId = () => {
+  let id = sessionStorage.getItem("portfolio_conversation_id");
 
-    setMessages((prev) => [...prev, { role: "user", text: trimmed }]);
-    setInput("");
-    setLoading(true);
+  if (!id) {
+    id = crypto.randomUUID();
+    sessionStorage.setItem("portfolio_conversation_id", id);
+  }
 
-    try {
-      const apiUrl = import.meta.env.VITE_API;
-      const res = await fetch(`${apiUrl}/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: trimmed }),
-      });
-      const data = await res.json();
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", text: data.reply ?? "Sorry, I couldn't get a response." },
-      ]);
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", text: "Hello, Am currently under maintenance." },
-      ]);
-    } finally {
-      setLoading(false);
-    }
-  };
+  return id;
+};
+
+ const sendMessage = async (text) => {
+  const trimmed = text.trim();
+  if (!trimmed || loading) return;
+
+  setMessages((prev) => [
+    ...prev,
+    { role: "user", text: trimmed },
+  ]);
+
+  setInput("");
+  setLoading(true);
+
+  try {
+    const apiUrl = import.meta.env.VITE_API;
+
+    const conversationId = getConversationId();
+
+    const res = await fetch(`${apiUrl}/chat`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: trimmed,
+        conversation_id: conversationId,
+      }),
+    });
+
+    const data = await res.json();
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        text:
+          data.reply ??
+          "Sorry, I couldn't get a response.",
+      },
+    ]);
+  } catch {
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        text: "Hello, Am currently under maintenance.",
+      },
+    ]);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") sendMessage(input);
