@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {FaHome,FaCode, FaGraduationCap,FaBlog, FaProjectDiagram, FaEnvelope, FaBars, FaSuperpowers, FaTimes} from "react-icons/fa";
+import {FaHome,FaCode, FaGraduationCap,FaBlog, FaProjectDiagram, FaAward, FaEnvelope, FaBars, FaSuperpowers, FaTimes} from "react-icons/fa";
 
  const USER = {
   name: "Arnold",
@@ -12,8 +12,10 @@ const NAV_CONTENTS = [
   { label: "Home", icon: <FaHome />, path: "/" },
   { label: "Skills", icon: <FaCode />, path: "/skills" },
   { label: "Education", icon: <FaGraduationCap />, path: "/education" },
+    { label: "Certifications", icon: <FaAward />, path: "/certificates" },
   { label: "Blogs", icon: <FaBlog />, path: "/blogs" },
   { label: "Projects", icon: <FaProjectDiagram />, path: "/projects" },
+
   { label: "Contact", icon: <FaEnvelope />, path: "/contact" },
 ];
 
