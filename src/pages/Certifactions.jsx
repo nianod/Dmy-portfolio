@@ -5,10 +5,15 @@ const Certifications = () => {
 
   return (
     <section>
-      <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-800 lg:grid-cols-4 gap-5 py-6   flex-col items-center mt-19 pb-25">
+      <div
+        data-aos="zoom-in"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-6 mt-19 pb-25"
+      >
         {certificates.map((cert) => (
-          <div key={cert.name} className="rounded-xl border overflow-hidden">
-            
+          <div
+            key={cert.name}
+            className="rounded-xl border border-gray-200 overflow-hidden bg-white hover:border-gray-400 transition-colors duration-200"
+          >
             {/* Preview */}
             <div className="h-48 bg-gray-50">
               <img
@@ -20,27 +25,24 @@ const Certifications = () => {
 
             {/* Info */}
             <div className="p-4">
-             <div className="flex justify-between">
-              <h3 className="font-semibold">
-                {cert.name}
-              </h3>
-          by
-              <p className="text-sm text-gray-500">
-                {cert.provider}
-              </p>
+              <div className="flex items-baseline justify-between gap-2 mb-3">
+                <h3 className="font-semibold text-gray-900 truncate">
+                  {cert.name}
+                </h3>
+                <p className="text-xs text-gray-500 shrink-0">
+                  by {cert.provider}
+                </p>
               </div>
 
-            
               <a
                 href={cert.file}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm mt-3 inline-block"
+                className="inline-flex items-center gap-1 text-sm font-medium text-black hover:underline underline-offset-4 transition-all"
               >
-                View Certificate →
-              </a>
+                View Certificate
+               </a>
             </div>
-
           </div>
         ))}
       </div>

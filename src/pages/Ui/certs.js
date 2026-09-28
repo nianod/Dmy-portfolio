@@ -11,7 +11,7 @@ export const CertificatesData = {
     name: "AI Product Management",
     provider: "Pendo",
     year: 2026,
-    file: "/certificates/d613d8ec-4b75-4b61-8248-19ca9327cad6.webp",
+    file: "/certificates/aiproduct.pdf",
     image: "/certificates/aiproduct.png",
   },
 
@@ -39,14 +39,13 @@ export const CertificatesData = {
     image: "/certificates/APIsec.webp",
   },
 
-  webanalytics: {
-    name: "Web Analytics",
-    provider: "Future Learn",
-    year: 2026,
-    file: "/certificates/webanalytics.pdf",
-    image: "/certificates/webanalytics.png",
-  },
-
+webanalytics: {
+  name: "Web Analytics",
+  provider: "Future Learn",
+  year: 2026,
+  file: "/certificates/web-stats.pdf",
+  image: "/certificates/stats.png",
+},
   fullstack: {
     name: "FullStack Development",
     provider: "Simplelearn Skillup",
