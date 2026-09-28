@@ -13,6 +13,7 @@ import ParticleBackground from "./ParticleBackground";
 import Logger from "./tokio/Loger";
 import LoggerLogin from "./tokio/LoggerLogin";
 import ProtectedRoute from "./tokio/ProtectedRoute";
+import Certifactions from "./pages/Certifactions";
 
 const App = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const App = () => {
               <Route path="education" element={<Education />} />
               <Route path="blogs" element={<Blogs />} />
               <Route path="projects" element={<Projects />} />
+              <Route path="certificates" element={<Certifactions />} />
               <Route path="contact" element={<Contact />} />
             </Route>
             <Route path="login" element={<LoggerLogin />} />
