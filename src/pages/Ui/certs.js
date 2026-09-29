@@ -24,7 +24,7 @@ export const CertificatesData = {
   },
 
   hadera: {
-    name: "Hashgraph Developer",
+    name: "Hashgraph Developement",
     provider: "Hasggraph Association",
     year: 2026,
     file: "/certificates/hashgraph.pdf",
@@ -52,6 +52,13 @@ webanalytics: {
     year: 2026,
     file: "/certificates/fullstack.pdf",
     image: "/certificates/fullstack.webp",
+  },
+    claudeCode: {
+    name: "ClaudeCode in Action",
+    provider: "Athropic",
+    year: 2026,
+    file: "/certificates/antropic.pdf",
+    image: "/certificates/anthropic.webp",
   },
 };
 
