@@ -55,10 +55,24 @@ webanalytics: {
   },
     claudeCode: {
     name: "ClaudeCode in Action",
-    provider: "Athropic",
+    provider: "Anthropic",
     year: 2026,
     file: "/certificates/antropic.pdf",
     image: "/certificates/anthropic.webp",
+  },
+      dsa: {
+    name: "Machine Learning Model Development",
+    provider: "CodeSignal",
+    year: 2026,
+    file: "/certificates/algorithms.pdf",
+    image: "/certificates/algorithms.png",
+  },
+      marketing: {
+    name: "Digital Marketing",
+    provider: "Uni Athena",
+    year: 2026,
+    file: "/certificates/digitalmarketing.pdf",
+    image: "/certificates/digitalmarketing.png",
   },
 };
 
